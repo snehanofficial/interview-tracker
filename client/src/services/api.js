@@ -3,7 +3,7 @@ import { getToken, logout } from '../utils/auth.js';
 
 // ── Axios instance ────────────────────────────────────────────────────
 const api = axios.create({
-    baseURL: process.env.VITE_API_BASE_URL || '/api',   // Proxied to http://localhost:5000/api via Vite
+    baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000',   // Proxied to http://localhost:5000/api via Vite
     headers: { 'Content-Type': 'application/json' },
 });
 
